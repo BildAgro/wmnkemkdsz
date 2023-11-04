@@ -1,0 +1,576 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+
+}
+html , body{
+    width: 100%;
+    height: 100%;
+}
+.open-menu{
+    height: 0vh;
+    width: 0;
+    position: absolute;
+    background-color: red;
+    z-index: 98;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    flex-direction: column;
+    padding-top: 180%;
+    gap: 30px;
+    transition:  .2s linear;
+}
+.open-menu.active{
+    height: 200vh;
+    width: 100%;
+    position: absolute;
+    background-color: #7e4bb3;
+    z-index: 90;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    flex-direction: column;
+     padding-top: 180%;
+     gap: 30px;
+     transition:   width .2s linear;
+}
+
+#nav i{
+    font-size: 6vw;
+    color: white;
+    cursor: pointer;
+    display: none;
+    z-index: 97;
+    position: absolute;
+    right: 10px;
+   
+}
+#nav{
+    height: 100px;
+  color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1.5vw 6vw;
+    gap: 40px;
+    font-family: "Mooli";
+    width: 100%;
+z-index: 98;
+    position: fixed;
+}
+#nav img{
+    height: 6vw;
+    width: 6vw;
+}
+.nav-links a{
+    font-weight: 900;
+    text-transform: uppercase;
+ padding: 2vw;
+ color: #fff;
+}
+.nav-links{
+    justify-content: flex-start;
+}
+video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position:fixed;
+    z-index: -5;
+}
+#main{
+    position: relative;
+  background: rgb(60, 56, 56 , 0.37);
+  font-family: "Poppins";
+  color: #fff;
+}
+.page-1{
+height: 100vh;
+width: 100%;
+position:relative;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+z-index: 10;
+}
+.cursor{
+    height: 15px;
+    width: 15px;
+    background-color: black;
+    border-radius: 100%;
+    position: fixed;
+    z-index: 95;
+    transition: .2s linear;
+}
+.cursor-blur{
+    height: 500px;
+    width: 500px;
+    background-color:#7d17e9 ;
+    border-radius: 100%;
+    position: fixed;
+    filter: blur(104px);
+    transition: .4s linear;
+    z-index:2;
+}
+
+.page-1 h1{
+    font-size: 4.4vw;
+    font-weight: 900;
+    position: relative;
+    color: #fff;
+    -webkit-text-stroke: 2px #7e4bb3;
+
+}
+.page-1 h2{
+    font-size: 2.3vw;
+    font-family: "Carter One";
+  
+}
+.page-1 p{
+    text-align: center;
+    width: 60%;
+    font-family: "Montserrat";
+    margin-top: 15px;
+    font-size: 1.3vw;
+}
+.page-1 h1::before{
+    content: "Make Business With Great Ideas";
+    position: absolute;
+    color: black;
+   top: -2px;
+   left: -3px;
+   -webkit-text-stroke: 2px #7e4bb3;
+   
+}
+.page-2{
+    min-height: 100vh;
+    width: 100%;
+    z-index: 10;
+}
+.page-2 marquee{
+    font-size: 10vw;
+   color: transparent;
+    -webkit-text-stroke: 2px #7e4bb3;
+}
+
+.about-us{
+    display: flex;
+gap: 80px;
+padding: 2vw  6vw;
+}
+
+.about-us img{
+    height: 200px;
+    width: 300px;
+    border-radius: 5px;
+}
+.about-us-in {
+    text-align: center;
+}
+.about-us-in p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.about-us-in a{
+color:white;
+}
+
+.card-list{
+    display: flex;
+   align-items: center;
+    justify-content: space-evenly;
+    height: 60vh;
+margin-top: -190px;
+
+}
+.card{
+    height: 80%;
+    width: 25%;
+    /* background-color: royalblue; */
+    border-radius: 5px;
+    background-position:  center;
+    background-size: cover;
+    position: relative;
+    z-index: 97;
+    transition: .4s ease;
+}
+.page-2{
+    min-height: 100vh;
+}
+#card-1{
+    background-image: url("https://www.theupcent.com/wp-content/plugins/desert-companion//inc/themes/cosmobit/assets/images/service/img01.jpg");
+}
+#card-2{
+    background-image: url("https://www.theupcent.com/wp-content/plugins/desert-companion//inc/themes/cosmobit/assets/images/service/img03.jpg");
+}
+
+#card-3{
+    background-image: url("https://www.theupcent.com/wp-content/plugins/desert-companion//inc/themes/cosmobit/assets/images/service/img02.jpg");
+}
+.layer{
+    height: 0;
+    width: 0;
+    background-color: #7e4bb3;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    opacity: 0;
+    transition: .4s ease-in-out;
+}
+.heading-services{
+    text-align: center;
+    position: relative;
+    top: 83%;
+    font-size: 3vw;
+    transition: .2s linear;
+background: rgb(0, 0, 0, 0.6);
+}
+
+
+.card:hover{
+    .layer{
+        height: 100%;
+        width: 100%;
+        opacity: 1;
+    }
+    .heading-services{
+        opacity: 0;
+        display: none;
+    }
+}
+
+
+/* responsivness */
+@media (max-width:600px) {
+    .nav-links{
+        display: none;
+    }
+    #nav i{
+        display: block;
+    }
+    #nav{
+        justify-content: space-between;
+    }
+    #nav img{
+        height: 12vw;
+        width: 12vw;
+    }
+    .page-1 h1{
+        font-size: 8vw;
+        width: 90%;
+        text-align: center;
+    }
+    .page-1 h2{
+        font-size: 5.5vw;
+    }
+    .page-1 p{
+        font-size: 4vw;
+        width: 90%;
+        line-height: 22px;
+    }
+}
+@media (max-width:1000px) {
+    .cursor{
+        display: none;
+    }
+    .cursor-blur{
+        display: none;
+    }
+    .about-us{
+        flex-direction: column;
+    }
+    #img-2{
+        display: none;
+    }
+    #img-1{
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+    }
+    .services marquee{
+        margin-top: 60px;
+    }
+    .card-list{
+        flex-direction: column;
+        margin-top: 40px;
+    }
+    .card{
+        width: 90%;
+        height: 500px;
+    padding-top: 190px;
+    }
+    #card-2{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .layer{
+
+        width: 100%;
+    }
+    .heading-services{
+        top: -1%;
+        font-size: 6vw;
+    }
+    .core{
+        margin-top: 150px;
+    }
+    .content-business {
+        flex-direction: column;
+    }
+   #row--{
+    flex-direction: column;
+   }
+   .left img{
+   margin-bottom: -70px;
+    margin-top: 30px;
+  
+   }
+   #core-service .core-list {
+    text-align: center;
+   }
+.sub-content{
+    display: none;
+}
+   
+}
+
+
+.core{
+    padding:6vw 6vw;
+
+
+}
+
+
+ #core-service .core-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(350px , 1.5fr));
+    gap: 70px;
+width: 100%;
+    padding: 4vw 0;
+    text-align: justify;
+    word-spacing: -2.5px;
+    letter-spacing:.5px;
+}
+ #core-service .cores{
+    background-color: #111;
+    border-radius: 5px;
+    color: #fff;
+    padding: 1vw;
+}
+.cores{
+    background-color: #fff;
+height: 300px;
+color: #111;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+border-radius: 5px;
+}
+.core-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(300px , 1fr));
+    gap: 70px;
+width: 100%;
+    padding: 4vw 0;
+    text-align: center;
+}
+
+.cores h1{
+    text-align: center;
+}
+
+
+.business{
+    padding: 0 6vw;
+
+}
+.content-business{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 120px;
+}
+.left img{
+    height: 26vw;
+    width: 32vw;
+    border-radius: 5px;
+    object-fit: cover;
+}
+.right p{
+    text-align: justify;
+    padding-top: 15px;
+}
+.left{
+    gap: 20px;
+}
+#row--{
+    flex-direction: row-reverse;
+}
+.left-bullet{
+    text-align: center;
+    padding-top: 1px;
+z-index: 11;
+cursor: pointer;
+}
+.left{
+    z-index: 96;
+}
+.business{
+    font-family: "Montserrat";
+}
+.business p{
+    font-family: "Mooli";
+}
+.services{
+    padding: 1vw 6vw;
+}
+#core-service{
+    padding-bottom: 0vw;
+}
+.cores p{
+
+    font-family: "Mooli";
+}
+.reviews{
+    height: 100%;
+    width: 100%;
+color: #fff;
+
+padding: 1vw 6vw;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #06010a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .swiper-slide img {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 100%;
+ 
+    margin-left: auto;
+    margin-right: auto;
+  }
+.swiper-slide h3{
+    font-family: "Mooli";
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+.social{
+    padding:.5vw 6vw ;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.social-1{
+    border: 1px solid#dadada;
+    border-radius: 5px;
+    padding: 1vw;
+    z-index: 7;
+  
+}
+
+.social-2{
+    border: 1px solid#dadada;
+    border-radius: 5px;
+    padding: 1vw;
+
+}
+.social-3{
+    border: 1px solid#dadada;
+    border-radius: 5px;
+    padding: 1vw;
+    display: inline-block;
+
+}
+
+.social-1:hover{
+color: transparent;
+}
+footer img{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+height: 100px;
+width: 100px;
+margin-top:30px;
+}
+footer h1{
+    text-align: center;
+}
+
+#main-cont{
+    background-color: #000;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: #fff;
+    position: relative;
+    font-family: "Carter One";
+    padding: 0vw 14vw;
+}
+.main-content{
+    font-family: "Poppins";
+    z-index: 97;
+}
+.sub-content p{
+max-width: 600px;
+}
+.main-content{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+.main-content input{
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+}
+.main-content a button{
+    padding: 13px 34px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.random h1{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.random i{
+    font-size: 25px;
+}
